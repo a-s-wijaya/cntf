@@ -21,7 +21,7 @@ class CreateSdgsListsTable extends Migration
             $table->timestamps();
 
             $table->foreign('sdgs_id')->references('id')->on('sdgs_masters');
-            $table->foreign('created_by')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -21,7 +21,7 @@ class CreateSdgsEmissionsTable extends Migration
             $table->string('file')->nullable();
             $table->timestamps();
 
-            $table->foreign('list_id')->references('id')->on('sdgs_lists')->onDelete('cascade');
+            $table->foreign('sdgs_list_id')->references('id')->on('sdgs_lists')->onDelete('cascade');
         });
     }
 
